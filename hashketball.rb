@@ -67,5 +67,9 @@ def team_colors(tname)
     return gh[:home][:colors]
   elsif gh[:away][:team_name] == tname
     return gh[:away][:colors]
+  else #should only happen of bad team name is given
+    return []
   end
 end
+
+def player_numbers(tname)
