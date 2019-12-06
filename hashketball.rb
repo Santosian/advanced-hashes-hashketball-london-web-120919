@@ -51,7 +51,15 @@ def num_points_scored(pname)
 	return play[:points]
 end
 
+def shoe_size(pname)
+	players = all_players()
+	play = players.find {|p| p[:player_name] == pname}
+	return play[:shoe]
+end
 
+def team_names(gh)
+  return [gh[:away][:team_name], gh[:home][:team_name]]
+end
 
-
+def
 
