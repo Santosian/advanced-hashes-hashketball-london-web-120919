@@ -41,12 +41,13 @@ def game_hash
 end
 
 def all_players
-  gh[:home][:players] + gh[:away][:players]
+	gh = game_hash()
+ 	gh[:home][:players] + gh[:away][:players]
 end
 
 def num_points_scored(pname)
 	players = all_players()
-	idx = players.find_index {|p| p.name == pname}
+	idx = players.find_index {|p| p[:player_name] == pname}
 	return players[idx][:points]
 end
 
