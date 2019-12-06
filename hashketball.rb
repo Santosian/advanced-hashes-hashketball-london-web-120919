@@ -61,5 +61,8 @@ def team_names(gh)
   return [gh[:away][:team_name], gh[:home][:team_name]]
 end
 
-def
+def team_colors(tname)
+  gh = game_hash()
+  if gh[:home][:team_name] == tname
+    return gh[:home][:colors]
 
