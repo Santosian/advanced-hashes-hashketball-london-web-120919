@@ -44,8 +44,11 @@ def all_players
   gh[:home][:players] + gh[:away][:players]
 end
 
-def num_points_scored
-
+def num_points_scored(pname)
+	players = all_players()
+	idx = players.find_index {|p| p.name == pname}
+	return players[idx][:points]
+end
 
 
 
