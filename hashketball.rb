@@ -47,8 +47,8 @@ end
 
 def num_points_scored(pname)
 	players = all_players()
-	idx = players.find_index {|p| p[:player_name] == pname}
-	return players[idx][:points]
+	play = players.find {|p| p[:player_name] == pname}
+	return play[:points]
 end
 
 
