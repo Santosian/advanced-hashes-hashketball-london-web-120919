@@ -111,5 +111,5 @@ end
 def winning_team
   gh = game_hash
   home_points = gh[:home][:players].map{|p| p[:points]}
-  home_score = home_points.sum()
+  home_score = home_points.reduce(0){|a,b| a+b}
 end
