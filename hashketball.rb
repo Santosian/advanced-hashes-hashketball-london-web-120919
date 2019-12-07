@@ -128,3 +128,9 @@ def player_with_longest_name
   return longname[:player_name]
 end
 
+def long_name_steals_a_ton?
+  longname = player_with_longest_name()
+  stealer = all_players().max_by{|p| p[:steals]}
+  return (stealer[:player_name] == longname)
+end
+
