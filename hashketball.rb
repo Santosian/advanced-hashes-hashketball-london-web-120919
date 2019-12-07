@@ -82,3 +82,7 @@ def player_numbers(tname)
   end
   players.map {|p| p[:number]}
 end
+
+def player_stats(pname)
+  all_players().find{|p| p[:player_name] == pname }
+end
