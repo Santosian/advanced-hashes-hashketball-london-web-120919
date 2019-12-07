@@ -123,5 +123,7 @@ end
 
 def player_with_longest_name
   players = all_players()
-  players.max_by
+  longname = players.max_by{|p| p[:player_name].length}
+  return longname[:player_name]
 end
+
