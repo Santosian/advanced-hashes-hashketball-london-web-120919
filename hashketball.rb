@@ -96,3 +96,7 @@ def player_stats(pname)
     :slam_dunks => play[:slam_dunks]
   }
 end
+
+def big_shoe_rebounds
+  
+end
