@@ -105,7 +105,8 @@ def big_shoe_rebounds
 end
 
 def most_points_scored
-  return all_players().max_by{|p| p[:points]}
+  mvp = all_players().max_by{|p| p[:points]}
+  return mvp[:player_name]
 end
 
 def winning_team
