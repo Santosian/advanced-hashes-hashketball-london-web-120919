@@ -120,3 +120,8 @@ def winning_team
     return gh[:away][:team_name]
   end
 end
+
+def player_with_longest_name
+  players = all_players()
+  players.max_by
+end
