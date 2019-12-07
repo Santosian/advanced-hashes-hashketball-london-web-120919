@@ -99,5 +99,6 @@ end
 
 def big_shoe_rebounds
   players = all_players()
-  bigfoot = players.max
+  bigfoot = players.max_by {|p| p[:shoe] }
+  return bigfoot[:rebounds]
 end
