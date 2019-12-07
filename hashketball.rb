@@ -98,5 +98,6 @@ def player_stats(pname)
 end
 
 def big_shoe_rebounds
-  
+  players = all_players()
+  bigfoot = players.max
 end
