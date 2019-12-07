@@ -58,7 +58,7 @@ def shoe_size(pname)
 end
 
 def team_names(gh)
-  return [gh[:away][:team_name], gh[:home][:team_name]]
+  pp [gh[:away][:team_name], gh[:home][:team_name]]
 end
 
 def team_colors(tname)
