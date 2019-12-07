@@ -100,7 +100,16 @@ end
 
 def big_shoe_rebounds
   players = all_players()
-  bigfoot = players.max_by {|p| p[:shoe] }
+  bigfoot = players.max_by{|p| p[:shoe] }
   return bigfoot[:rebounds]
 end
 
+def most_points_scored
+  return all_players().max_by{|p| p[:points]}
+end
+
+def winning_team
+  gh = game_hash
+  home_points = gh[:home][:players].map{|p| p[:points]}
+  home_score = home_points.sum()
+end
