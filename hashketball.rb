@@ -112,4 +112,11 @@ def winning_team
   gh = game_hash
   home_points = gh[:home][:players].map{|p| p[:points]}
   home_score = home_points.reduce(0){|a,b| a+b}
+  away_points = gh[:away][:players].map{|p| p[:points]}
+  away_score = away_points.reduce(0){|a,b| a+b}
+  if home_score > away_score
+    return gh[:home][:team_name]
+  else
+    return gh[:away][:team_name]
+  end
 end
