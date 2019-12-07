@@ -84,5 +84,15 @@ def player_numbers(tname)
 end
 
 def player_stats(pname)
-  all_players().find{|p| p[:player_name] == pname }
+  play = all_players().find{|p| p[:player_name] == pname }
+  return {
+    :number     => play[:number],
+    :shoe       => play[:shoe],
+    :points     => play[:points],
+    :rebounds   => play[:rebounds],
+    :assists    => play[:assists],
+    :steals     => play[:steals],
+    :blocks     => play[:blocks],
+    :slam_dunks => play[:slam_dunks]
+  }
 end
