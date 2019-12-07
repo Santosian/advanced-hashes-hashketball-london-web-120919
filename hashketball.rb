@@ -59,7 +59,7 @@ end
 
 def team_names
   gh = game_hash()
-  pp [gh[:away][:team_name], gh[:home][:team_name]]
+  return [gh[:away][:team_name], gh[:home][:team_name]]
 end
 
 def team_colors(tname)
